@@ -1,0 +1,24 @@
+# Vehicle Field Reliability Analytics — Phase 1
+# Install: pip install -r requirements.txt
+
+# Core
+numpy>=1.24
+pandas>=2.0
+pyarrow>=14.0           # parquet support
+
+# Statistics
+scipy>=1.11
+
+# Visualization
+matplotlib>=3.7
+seaborn>=0.13
+
+# API client (for live NHTSA ingestion)
+requests>=2.31
+
+# ── Phase 2 (future) ──
+# prefect>=2.14          # orchestration
+# duckdb>=0.9            # analytical DB
+# scikit-learn>=1.3      # NLP clustering
+# sentence-transformers  # embeddings
+# streamlit>=1.28        # dashboard
