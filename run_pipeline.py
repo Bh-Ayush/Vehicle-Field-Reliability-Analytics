@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Vehicle Field Reliability Analytics — Phase 1 Pipeline
+Vehicle Field Reliability Analytics — Pipeline
 
-Orchestrates:
+
   1. Data ingestion  (NHTSA API or synthetic)
   2. Cleaning + feature engineering
   3. Exploratory data analysis
@@ -11,7 +11,7 @@ Orchestrates:
 Usage:
     python run_pipeline.py                  # full pipeline, synthetic data
     python run_pipeline.py --mode api       # full pipeline, live NHTSA data
-    python run_pipeline.py --step eda       # run only EDA (assumes cleaned data exists)
+    python run_pipeline.py --step eda       # run only EDA (assuming cleaned data exists)
 """
 
 import argparse
