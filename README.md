@@ -1,8 +1,8 @@
 # Vehicle-Field-Reliability-Analytics
 
-**Identify emerging vehicle failure patterns from NHTSA complaint data to support field reliability engineering decisions.**
+**An end-to-end analytics platform that ingests NHTSA consumer complaint data, performs statistical reliability analysis using Weibull survival models, and surfaces actionable failure patterns across EV manufacturers — Tesla, Rivian, Lucid, and Ford's EV lineup.**
 
-An end-to-end analytics platform that ingests NHTSA consumer complaint data, performs statistical reliability analysis using Weibull survival models, and surfaces actionable failure patterns across EV manufacturers — Tesla, Rivian, Lucid, and Ford's EV lineup.
+
 
 ---
 
@@ -35,7 +35,7 @@ NHTSA API ─→ Ingest ─→ Clean ─→ EDA ─→ Weibull Analysis
 | 1 < β ≤ 2 | Early wear-out beginning | Preventive maintenance scheduling |
 | β > 2 | Wear-out / fatigue failures | Component redesign, material upgrade |
 
-## Quick Start
+## How to Run 
 
 ```bash
 # Clone and setup
@@ -99,7 +99,7 @@ Vehicle-Field-Reliability-Analytics/
 
 ## Data Sources
 
-- **Primary**: [NHTSA Vehicle Complaints Database](https://www.nhtsa.gov/recalls-complaints/complaints) — public API, no key required
+- **Primary**: [NHTSA Vehicle Complaints Database](https://www.nhtsa.gov/recalls-complaints/complaints) 
 - **Scope**: Tesla (Model 3/Y/S/X), Rivian (R1T/R1S), Lucid Air, Ford (Mach-E, F-150 Lightning)
 - **Synthetic mode**: Generates 5,000 records with statistically plausible Weibull-distributed failure times per component, for development and demonstration
 
@@ -118,13 +118,6 @@ Parameters are estimated via Maximum Likelihood Estimation (MLE) using `scipy.st
 - Abernethy, R.B. *The New Weibull Handbook* (5th ed.)
 - O'Connor, P.D.T. & Kleyner, A. *Practical Reliability Engineering* (5th ed.)
 
-## Roadmap
-
-- [x] **Phase 1**: Ingestion → Cleaning → EDA → Weibull Analysis
-- [ ] **Phase 2**: Prefect orchestration + DuckDB storage layer
-- [ ] **Phase 3**: NLP clustering on complaint narratives (sentence-transformers)
-- [ ] **Phase 4**: Streamlit interactive dashboard
-- [ ] **Phase 5**: Automated alerting for emerging failure patterns
 
 ## License
 
